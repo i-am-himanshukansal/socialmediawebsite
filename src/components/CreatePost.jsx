@@ -2,8 +2,6 @@
 
 const CreatePost = () => {
     const handleSubmit = () => {
-      
-         
     };
 
     return (

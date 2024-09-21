@@ -8,3 +8,6 @@
 .sidebar{
     min-height: 800px;
 }
+.postlistitems{
+    display: flex;
+}
