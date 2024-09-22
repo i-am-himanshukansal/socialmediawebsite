@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import { BiCurrentLocation } from "react-icons/bi";
 const DEFAULT_POST_LIST =[
     {
         id: "1",
@@ -69,14 +70,35 @@ const postListReducer=( currPostlist,action)=>{
     let newpostlist  =  currPostlist;
    if(action.type==="DELETE_POST"){
     newpostlist =  currPostlist.filter((post)=>post.id!==action.payload.postid);
-   }
+   }else if(action.type ==="ADD_NEW_POST"){
+//    
+//         newpostlist = [...currPostlist,{
+//             id : Date.now(),
+//             userID : action.payload.UserID,
+//             title : action.payload.PostTitle,
+//             body : action.payload.PostBody,
+//             reactions : action.payload.Reactions,
+//             tags: action.payload.Hashtags,
+//         }]}
+//                          ///////////////////////////////////////////dono method sahi hai, bas pehle me currpostlist ke bad add ho raha hai
+                            ////////////////////////////and second me pehle add ho raha hai
+            newpostlist = [action.payload , ...currPostlist];
+        }
    return newpostlist;
 }
 
 const PostListprovider = ({children})=>{
     const [postList , dispatchpostList] = useReducer(postListReducer,DEFAULT_POST_LIST); 
 
-    const addPost=()=>{
+    const addPost=(userID, title, body, reactions,tags)=>{//can take as a,b,c,d,e
+            console.log(`${userID} ${title} ${body} ${reactions} ${tags}`);
+            dispatchpostList({
+                type : "ADD_NEW_POST",
+                payload : {
+                    id : Date.now(),
+                    userID, title, body, reactions,tags
+                }
+            })
     }
     const deletePost=(postid)=>{
         console.log(`deleete post call for : ${postid}`);
