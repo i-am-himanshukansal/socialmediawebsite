@@ -10,6 +10,7 @@ import { useState } from "react";
 import PostListprovider from "./store/post-list-store";
 
 function App() {
+  
 
   const[selectedtab , setselectedtab]  = useState("createpost");
   return (
@@ -19,7 +20,7 @@ function App() {
                     <Sidebar selectedTab = {selectedtab} setselectedtab = {setselectedtab}></Sidebar>
                            <div className="content"> 
                            <Header></Header>
-                           { selectedtab == "home"? (<CreatePost></CreatePost>) :  (<PostList></PostList>)}
+                           { selectedtab == "createpost"? (<CreatePost></CreatePost>) :  (<PostList></PostList>)}
                            <Footer></Footer>
                            </div>
            </div>
