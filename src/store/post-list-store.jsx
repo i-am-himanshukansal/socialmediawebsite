@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-const DEFAULT_POST_LIST =[ 
+const DEFAULT_POST_LIST =[
     {
         id: "1",
         title: "GO TO MUMBAI",
@@ -24,9 +24,40 @@ const DEFAULT_POST_LIST =[
         userID: "user-11",
         tags: ["vacations", "beach", "summer", "relaxation"]
     },
-    
-
+    {
+        id: "4",
+        title: "TRIP TO JAPAN",
+        body: "I'm planning a cultural trip to Japan next spring. Can't wait to explore Kyoto!",
+        reactions: 5,
+        userID: "user-15",
+        tags: ["vacations", "trip", "Asia", "cultural"]
+    },
+    {
+        id: "5",
+        title: "ROAD TRIP ACROSS THE USA",
+        body: "Thinking about a cross-country road trip this summer! Any recommendations?",
+        reactions: 10,
+        userID: "user-20",
+        tags: ["vacations", "road trip", "USA", "adventure"] // Fixed the comma before tags
+    },
+    {
+        id: "6",
+        title: "EXPERIMENTING WITH ITALIAN CUISINE",
+        body: "Tried making homemade pasta for the first time! It was delicious!",
+        reactions: 8,
+        userID: "user-18",
+        tags: ["food", "cooking", "Italian", "recipes"]
+    },
+    {
+        id: "7",
+        title: "BAKING A CHOCOLATE CAKE",
+        body: "Baked a rich chocolate cake for my friend's birthday. It was a hit!",
+        reactions: 15,
+        userID: "user-22",
+        tags: ["food", "baking", "dessert", "celebration"]
+    }
 ]
+
 const DEFAULT_CONTEXT = {
     postlist:[],
     addPost : ()=>{},
