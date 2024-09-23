@@ -1,9 +1,9 @@
-import { FaInstagram } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-import { SiGeeksforgeeks } from "react-icons/si";
+import { FaInstagram } from "react-icons/fa6";//insta
+import { FaFacebook } from "react-icons/fa";//fb
+import { FaLinkedin } from "react-icons/fa";//linkedIN
+import { FaGithub } from "react-icons/fa";//Github
+import { SiLeetcode } from "react-icons/si";//leetcode
+import { SiGeeksforgeeks } from "react-icons/si";//geekforgeek
 import { FaAt } from "react-icons/fa";//@
 
 
