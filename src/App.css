@@ -4,6 +4,7 @@
 }
 .content{
     width: 100%;
+    background-color: lightblue;
 }
 
 .sidebar{
@@ -43,4 +44,7 @@
 }
 .searchbar::placeholder{
     background-color: white;
+}
+.welcome-message{
+    margin: 100px 0;
 }
