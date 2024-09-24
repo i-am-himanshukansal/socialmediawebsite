@@ -8,3 +8,5 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # socialmediawebsite
 <!-- display flex of post in postlist and execute in app.css -->    
+<!-- reactions me likes and dislikes two deined hai 
+if we print reaction then it is false -->

@@ -19,9 +19,11 @@ const CreatePost = () => {
         const PostTitle  = PostTitleelement.current.value;
         const PostBody  = Postbodyelement.current.value;
         const Reactions  = Reactionselement.current.value;
-        const Hashtags  = Hashtagselement.current.value.split(/(\s+)/);
-        
+       const Hashtags  = Hashtagselement.current.value
+        .split(/\s+/)  // Split by any number of spaces
+        .filter(tag => tag.trim() !== ''); // Remove empty tags
 
+    // console.log(Hashtags);  // Check the format of the hashtags
         addPost(UserID, PostTitle, PostBody, Reactions,Hashtags);
         
 

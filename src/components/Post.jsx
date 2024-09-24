@@ -4,8 +4,11 @@ import { MdOutlinePeopleAlt } from "react-icons/md";
 import styles from "./Post.module.css";
 import { Postlist } from "../store/post-list-store";
 import { useContext } from "react";
+import { BiSolidDislike } from "react-icons/bi";
+
 const Post = ({postdata}) => {//this 
 
+    console.log(postdata)
 
     const {deletePost} = useContext(Postlist);
     return (
@@ -24,11 +27,26 @@ const Post = ({postdata}) => {//this
                                             </span>
                                      </button>
                     </h5>
+                    {typeof postdata.reactions==="object" && (
+                    <h5><BiSolidLike />{postdata.reactions.likes} <BiSolidDislike/>{postdata.reactions.dislikes}</h5>
+                              )}
+                              {postdata.reactions.length>0 && (
                     <h5><BiSolidLike />{postdata.reactions}</h5>
+                )}
+
                     <p className="card-text body">{postdata.body}</p>
                     {postdata.tags.map((tag,index)=>( <span key={index} className="btn btn-primary reactions userid hashtag   "> #{tag} </span>))}
                                 <div className="alert alert-success reactionalert" role="alert" >
-                              This post is reacted by <BiSolidLike /> {postdata.reactions} people<MdOutlinePeopleAlt />  . 
+                              {typeof postdata.reactions==="object" && (
+                                <span>
+                              This post is reacted by <BiSolidLike /> {postdata.reactions.likes} ,  <BiSolidDislike/>{postdata.reactions.dislikes} people<MdOutlinePeopleAlt />  . 
+                              </span>
+                              )}
+                              {postdata.reactions.length>0 && (
+                                <span>
+                              This post is reacted by <BiSolidLike /> {postdata.reactions}. 
+                              </span>
+                              )}
                                 </div>
                         </div>
             </div>
