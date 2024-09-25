@@ -7,9 +7,6 @@ import { SiGeeksforgeeks } from "react-icons/si";//geekforgeek
 import { FaAt } from "react-icons/fa";//@
 
 
-
-
-
 const Footer = () =>{
     return <>
             <footer className="py-3 my-4">
